@@ -43,10 +43,11 @@
 
 .header__theme-menu-button_active {
   border: 1px solid var(--btn-color);
+  pointer-events: none;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--btn-hover);
+  outline: 1px solid var(--btn-hover);
 }
 
 .header__theme-menu-button:focus-visible {
@@ -66,10 +67,6 @@
 }
 
 .header__title-text {
-  font-family: "IBM Plex mono", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 23.4px;
   justify-self: end;
   align-self: center;
   width: 100%;
@@ -79,6 +76,10 @@
 .title-decor {
   background-color: var(--accent-color);
   color: var(--subtitle-text);
+  font-family: "IBM Plex mono", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 23.4px;
 }
 
 .header__rec {
@@ -139,7 +140,7 @@
 }
 
 .section__title {
-  color: var(--accent-color);
+  color: var(--section-title-color);
   font-family: "IBM Plex mono", sans-serif;
   font-weight: 700;
   font-size: 18px;
@@ -177,7 +178,6 @@
 
 .section_concentration {
   grid-template-columns: 1fr;
-  column-gap: 20px;
 }
 
 .section_concentration .section__title {
@@ -223,10 +223,7 @@
 }
 
 .card__subtitle {
-  font-family: "IBM Plex mono", sans-serif;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 23.4px;
 }
 
 .card__text {
@@ -255,7 +252,7 @@
 
 .section_gallery {
   display: block;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
 }
 
 .section_gallery__title {
@@ -272,7 +269,6 @@
 
 .gallery__image {
   width: 100%;
-  height: auto;
   object-fit: cover;
   display: block;
   grid-column: auto;
@@ -376,7 +372,6 @@
   .gallery {
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
   }
 
   .gallery__image {
@@ -416,6 +411,11 @@
 @media (min-width: 1024px) {
   .header {
     min-height: 768px;
+    padding: 20px;
+  }
+
+  .header__title{
+    margin-left: -20px;
   }
 
   .header__title-text {
@@ -431,6 +431,10 @@
     flex-direction: row;
   }
 
+  .section_why-difficult{
+    gap: 10px;
+  }
+
   .section_advices {
     gap: 10px;
   }
@@ -439,13 +443,7 @@
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .section_concentration .section__title {
-    grid-column: 1 / 2;
-  }
-
   .section_concentration .section__body {
-    grid-column: 1 / -1;
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
   }
 }
