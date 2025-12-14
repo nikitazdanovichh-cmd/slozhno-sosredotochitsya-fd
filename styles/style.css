@@ -163,7 +163,7 @@
 
 .section_why-difficult {
   grid-template-columns: 1fr;
-  padding-top: 50px;
+  padding-top: 40px;
   gap: 20px;
 }
 
@@ -227,7 +227,6 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 23.4px;
-  font-weight: 400;
 }
 
 .card__text {
@@ -256,7 +255,7 @@
 
 .section_gallery {
   display: block;
-  padding-bottom: 60px;
+  padding-bottom: 50px;
 }
 
 .section_gallery__title {
@@ -282,7 +281,7 @@
 
 .footer {
   height: 100vh;
-  min-height: 768px;
+  min-height: 668px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -303,7 +302,7 @@
   }
 
   .header {
-    min-height: 768px;
+    min-height: 1024px;
     padding: 20px 20px 0 0;
   }
 
@@ -351,6 +350,14 @@
     grid-column: 2;
   }
 
+  .section_concentration {
+    grid-template-columns: min-content 1fr;
+  }
+
+  .section_concentration .section__title {
+    grid-column: 1 / 2;
+  }
+
   .section_advices {
     grid-template-columns: 1fr 2fr;
   }
@@ -374,7 +381,7 @@
   .gallery {
     gap: 20px;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 260px 315px;
+    grid-template-rows: auto;
   }
 
   .gallery__image {
@@ -404,6 +411,10 @@
   .gallery__image_street {
     grid-column: 2 / 4;
     grid-row: 3 / 4;
+  }
+
+  .footer {
+    min-height: 1024px;
   }
 }
 
