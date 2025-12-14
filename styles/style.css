@@ -414,7 +414,7 @@
     padding: 20px;
   }
 
-  .header__title{
+  .header__title {
     margin-left: -20px;
   }
 
@@ -431,7 +431,7 @@
     flex-direction: row;
   }
 
-  .section_why-difficult{
+  .section_why-difficult {
     gap: 10px;
   }
 
